@@ -14,3 +14,11 @@ Varian baru:
 - examples/DrunkBot (Isa): SpinningRadar, LinearTargeting, Circle, ClosestSelectEnemy, MaximumPowerGun
 - examples/ChaosBot (Isa): SpinningRadar, HeadOnTargeting, Cornering, RandomSelectEnemy, MaximumPowerGun
 - examples/HumanBot (Isa): MouseRadar, MouseTargeting, KeyboardMovement, WeakestSelectEnemy, MouseClickGun
+
+- examples/HappyBot (Austin): SpinningRadar, HeadOnTargeting, KeyboardMovement, StrongestSelectEnemy, DistanceBasedGun
+- examples/SADBot (Austin): MouseRadar, HeadOnTargeting, KeyboardMovement, WeakestSelectEnemy, DistanceBasedGun
+- examples/NormalBot (Austin): MouseRadar, LinearTargeting, Circle, StrongestSelectEnemy, DistanceBasedGun
+
+- examples/RandomWalkerBot (Maurice): SpinningRadar, HeadOnTargeting, RandomMovement, ClosestSelectEnemy, NoFireGun
+- examples/RandomBullyBot (Maurice): SpinningRadar, LinearTargeting, RandomMovement, WeakestSelectEnemy, MaximumPowerGun
+- examples/GunClickerBot (Maurice): SpinningRadar, MouseTargeting, RandomMovement, RandomSelectEnemy, MouseClickGun

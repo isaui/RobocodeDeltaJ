@@ -1,0 +1,44 @@
+package jab.module;
+
+/**
+ * Targeting
+ * 
+ * @author jabier.martinez
+ */
+public class Targeting extends Part {
+
+	public Module bot;
+
+	public Targeting(Module bot) {
+		this.bot = bot;
+	}
+
+	public void target() {
+		if (bot.enemy != null) {
+			double myX = bot.getX();
+			double myY = bot.getY();
+			double enemyX = bot.enemy.x;
+			double enemyY = bot.enemy.y;
+			double enemyHeading = bot.enemy.headingRadians;
+			double enemyVelocity = bot.enemy.velocity;
+			double deltaTime = 0;
+			double battleFieldHeight = bot.getBattleFieldHeight(), battleFieldWidth = bot.getBattleFieldWidth();
+			double predictedX = enemyX, predictedY = enemyY;
+			while ((++deltaTime) * (20.0 - 3.0 * bot.bulletPower) < java.awt.geom.Point2D.Double.distance(myX, myY,
+					predictedX, predictedY)) {
+				predictedX += Math.sin(enemyHeading) * enemyVelocity;
+				predictedY += Math.cos(enemyHeading) * enemyVelocity;
+				if (predictedX < 18.0 || predictedY < 18.0 || predictedX > battleFieldWidth - 18.0
+						|| predictedY > battleFieldHeight - 18.0) {
+					predictedX = Math.min(Math.max(18.0, predictedX), battleFieldWidth - 18.0);
+					predictedY = Math.min(Math.max(18.0, predictedY), battleFieldHeight - 18.0);
+					break;
+				}
+			}
+			double theta = robocode.util.Utils
+					.normalAbsoluteAngle(Math.atan2(predictedX - bot.getX(), predictedY - bot.getY()));
+			bot.setTurnGunRightRadians(robocode.util.Utils.normalRelativeAngle(theta - bot.getGunHeadingRadians()));
+		}
+	}
+
+}
