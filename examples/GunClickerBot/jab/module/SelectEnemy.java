@@ -1,0 +1,33 @@
+package jab.module;
+
+/**
+ * Select enemy
+ * 
+ * @author jabier.martinez
+ */
+public class SelectEnemy extends Part {
+
+	public Module bot;
+
+	public SelectEnemy(Module bot) {
+		this.bot = bot;
+	}
+
+	public void select() {
+		java.util.ArrayList<jab.module.BotInfo> enemies = new java.util.ArrayList<jab.module.BotInfo>();
+		java.util.Iterator<jab.module.BotInfo> iterator = bot.botsInfo.values().iterator();
+		while (iterator.hasNext()) {
+			jab.module.BotInfo botInfo = iterator.next();
+			if (!botInfo.teammate) {
+				enemies.add(botInfo);
+			}
+		}
+		if (enemies.size() > 0) {
+			int randomIndex = (int) (Math.random() * enemies.size());
+			bot.enemy = enemies.get(randomIndex);
+		} else {
+			bot.enemy = null;
+		}
+	}
+
+}
