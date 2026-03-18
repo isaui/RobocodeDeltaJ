@@ -11,6 +11,6 @@ Fitur baru:
 - DistanceBasedGun (Austin): Damage dari senjata bergantung kepada jarak dari penembak ke target, semakin jauh semakin kecil damage nya
 
 Varian baru:
-- examples/DrunkBot (Isa)
-- examples/ChaosBot (Isa)
-- examples/HumanBot (Isa)
+- examples/DrunkBot (Isa): SpinningRadar, LinearTargeting, Circle, ClosestSelectEnemy, MaximumPowerGun
+- examples/ChaosBot (Isa): SpinningRadar, HeadOnTargeting, Cornering, RandomSelectEnemy, MaximumPowerGun
+- examples/HumanBot (Isa): MouseRadar, MouseTargeting, KeyboardMovement, WeakestSelectEnemy, MouseClickGun
