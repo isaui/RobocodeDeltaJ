@@ -3,9 +3,12 @@
 		modifies <../src/jab/module/Movement.java>
 		{
 	modifyStatementListContainer(<method:jab.module.Movement.move()>, "public void move() {
-			bot.setAhead(moveAmount * moveDirection);
-			moveAmount = Math.max(0, moveAmount - 1);
-			bot.setTurnRight(45 * turnDirection);
+            double randomDistance = (Math.random() * 100) - 50;
+            
+            double randomAngle = (Math.random() * 90) - 45;
+
+            bot.setAhead(randomDistance);
+            bot.setTurnRight(randomAngle);
 	}
 ", "KeyboardMovement", false);
 	}

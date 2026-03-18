@@ -48,3 +48,6 @@ MouseClickGun:
 
 RandomSelectEnemy:
 <decore/RandomSelectEnemy.decore>
+
+RandomMovement:
+<decore/RandomMovement.decore>

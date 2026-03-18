@@ -22,6 +22,7 @@
           <features maxCardinality="1" name="Circle"/>
           <features maxCardinality="1" name="Line"/>
           <features maxCardinality="1" name="Cornering"/>
+          <features maxCardinality="1" name="RandomMovement"/>
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="SelectEnemy">
