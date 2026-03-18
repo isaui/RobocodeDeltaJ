@@ -1,0 +1,11 @@
+ configuration delta "Cornering"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Movement.java>
+		{
+	modifyStatementListContainer(<method:jab.module.Movement.move()>, "public void move() {
+			bot.setMaxVelocity(8);
+			bot.setAhead(10000);
+	}
+", "Cornering", false);
+	}
+	

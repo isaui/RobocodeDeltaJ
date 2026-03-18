@@ -1,0 +1,13 @@
+ configuration delta "MouseClickGun"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Gun.java>
+		{
+	modifyStatementListContainer(<method:jab.module.Gun.fire()>, "public void fire() {
+			if (bot.bulletPower > 0 && bot.getGunHeat() == 0) {
+				robocode.Bullet b = bot.setFireBullet(bot.bulletPower);
+				bot.registerBullet(b);
+			}
+	}
+", "MouseClickGun", false);
+	}
+	

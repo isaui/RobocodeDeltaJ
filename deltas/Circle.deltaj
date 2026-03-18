@@ -1,0 +1,13 @@
+delta Circle {
+
+	modifies jab.module.Movement {
+	
+		modifies move() {
+			bot.setMaxVelocity(6);
+			bot.setAhead(10000);
+			bot.setTurnRight(5);
+		}
+	
+	}
+
+}
